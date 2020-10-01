@@ -7,12 +7,16 @@ using System.Text;
 
 namespace BilanceExchange.Repository.Context
 {
-    class BilanceExhangeContext: DbContext
-    {
+    public class BilanceExchangeContext: DbContext
+    { 
         public DbSet<User> Users { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<CoinBalance> CoinBalances { get; set; }
         public DbSet<UserType> UserType { get; set; }
+
+        public BilanceExchangeContext( DbContextOptions options) : base(options)
+        {
+        }
     }
 }
