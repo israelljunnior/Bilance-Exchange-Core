@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Bilance_Exchange</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BilanceExchange.Domain\BilanceExchange.Domain.csproj" />
+    <ProjectReference Include="..\BilanceExchange.Repository\BilanceExchange.Repository.csproj" />
+  </ItemGroup>
+
+
+</Project>

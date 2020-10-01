@@ -8,24 +8,33 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Bilance_Exchange
+using BilanceExchange.Repository.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace BilanceExchange
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder();
+            builder.AddJsonFile("config.json", optional: false, reloadOnChange: true );
+            Configuration = builder.Build();
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            var connectionString = Configuration.GetConnectionString("BilanceExchangeDB");
+            services.AddDbContext<BilanceExchangeContext>(option => option.UseLazyLoadingProxies().UseMySql(connectionString,
+                                                        m => m.MigrationsAssembly("BilanceExchange.Repository")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BaBKDoa8G0RECb/Xih4OESfc05IJlkhcw8mSWeWCpY8kuIGNJKFebYOLRZ4JXTYcd84nD2rK2RT7cVtvTc5WoQ==",
+  "dgSpecHash": "kJm/6dahkdAqX831Op+zu+UEpSNExy3R7rOF6TYka9z2+NPiN8usqMZ1mtbYVgHFZuRGNW4lqp8Pnaqge3kh7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\Bilance Exchange.Domain.csproj",
+  "projectFilePath": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\BilanceExchange.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\israe\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\israe\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",

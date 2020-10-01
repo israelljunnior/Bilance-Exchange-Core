@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "BilanceExchangeDB": "Server=localhost;Database=BilanceExchange;Uid=admin;Pwd=admin;"
+  }
+}

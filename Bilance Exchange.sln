@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilance Exchange", "Bilance Exchange\Bilance Exchange.csproj", "{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange", "Bilance Exchange\BilanceExchange.csproj", "{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilance Exchange.Domain", "Bilance Exchange.Domain\Bilance Exchange.Domain.csproj", "{E2F75486-7B5E-4390-A168-4A6252CC0A2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Domain", "Bilance Exchange.Domain\BilanceExchange.Domain.csproj", "{E2F75486-7B5E-4390-A168-4A6252CC0A2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilance Exchange.Repository", "Bilance Exchange.Repository\Bilance Exchange.Repository.csproj", "{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Repository", "Bilance Exchange.Repository\BilanceExchange.Repository.csproj", "{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

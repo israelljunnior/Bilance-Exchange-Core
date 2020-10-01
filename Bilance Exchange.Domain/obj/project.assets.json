@@ -169,9 +169,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\Bilance Exchange.Domain.csproj",
-      "projectName": "Bilance Exchange.Domain",
-      "projectPath": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\Bilance Exchange.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\BilanceExchange.Domain.csproj",
+      "projectName": "BilanceExchange.Domain",
+      "projectPath": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\BilanceExchange.Domain.csproj",
       "packagesPath": "C:\\Users\\israe\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\israe\\source\\repos\\Bilance Exchange\\Bilance Exchange.Domain\\obj\\",
       "projectStyle": "PackageReference",
