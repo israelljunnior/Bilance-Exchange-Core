@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange", "Bilance Exchange\BilanceExchange.csproj", "{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange", "BilanceExchange\BilanceExchange.csproj", "{EE0BC8D6-9F59-4FC5-94F4-3EAA0079A35B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Domain", "Bilance Exchange.Domain\BilanceExchange.Domain.csproj", "{E2F75486-7B5E-4390-A168-4A6252CC0A2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Domain", "BilanceExchange.Domain\BilanceExchange.Domain.csproj", "{E4477045-9C0E-4ABF-90A9-C9BC81D804F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Repository", "Bilance Exchange.Repository\BilanceExchange.Repository.csproj", "{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilanceExchange.Repository", "BilanceExchange.Repository\BilanceExchange.Repository.csproj", "{F2B51DCA-5866-4CAD-AA5B-2B0658329BAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B5E4AC4-DD31-4706-8868-B81320EFA0F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2F75486-7B5E-4390-A168-4A6252CC0A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2F75486-7B5E-4390-A168-4A6252CC0A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2F75486-7B5E-4390-A168-4A6252CC0A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2F75486-7B5E-4390-A168-4A6252CC0A2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8453DB9C-D6BF-47B2-B49A-D9A62E1612C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE0BC8D6-9F59-4FC5-94F4-3EAA0079A35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0BC8D6-9F59-4FC5-94F4-3EAA0079A35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0BC8D6-9F59-4FC5-94F4-3EAA0079A35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0BC8D6-9F59-4FC5-94F4-3EAA0079A35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4477045-9C0E-4ABF-90A9-C9BC81D804F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4477045-9C0E-4ABF-90A9-C9BC81D804F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4477045-9C0E-4ABF-90A9-C9BC81D804F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4477045-9C0E-4ABF-90A9-C9BC81D804F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B51DCA-5866-4CAD-AA5B-2B0658329BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B51DCA-5866-4CAD-AA5B-2B0658329BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B51DCA-5866-4CAD-AA5B-2B0658329BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B51DCA-5866-4CAD-AA5B-2B0658329BAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

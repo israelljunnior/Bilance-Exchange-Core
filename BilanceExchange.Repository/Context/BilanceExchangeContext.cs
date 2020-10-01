@@ -18,5 +18,11 @@ namespace BilanceExchange.Repository.Context
         public BilanceExchangeContext( DbContextOptions options) : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(BilanceExchangeContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
