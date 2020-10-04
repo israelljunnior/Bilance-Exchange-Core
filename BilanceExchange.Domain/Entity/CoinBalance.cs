@@ -6,8 +6,11 @@ namespace Bilance_Exchange.Domain.Entity
 {
     public class CoinBalance : Entity
     {
-        private Currency currency { get; set; }
-        private double balance{ get; set; }
-        private String Address { get; set; }
+        public int Id { get; set; }
+        public int CurrencyId { get; set; }
+        public virtual Currency Currency { get; set; }
+        public double Balance { get; set; }
+        public String Address { get; set; }
+        public virtual  Wallet Wallet { get; set; }
     }
 }

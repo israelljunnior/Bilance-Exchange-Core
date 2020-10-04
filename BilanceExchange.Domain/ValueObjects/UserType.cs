@@ -7,7 +7,7 @@ namespace Bilance_Exchange.Domain.ValueObjects
 {
     public class UserType : ValueObject<UserType>
     {
-       private int Id { get; set; }
-       private UserTypeEnum userType { get; set; }
+       public int Id { get; set; }
+       public UserTypeEnum type { get; set; }
     }
 }

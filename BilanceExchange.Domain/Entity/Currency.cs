@@ -7,10 +7,9 @@ namespace Bilance_Exchange.Domain.Entity
 {
     public class Currency : Entity
     {
-        private int Id { get; set; }
-        private String Name { get; set; }
-        private String ShortName { get; set; }
-        private String Password { get; set; }
-        private UserTypeEnum UserType { get; set; }
+        public int Id { get; set; }
+        public String Name { get; set; }
+        public String ShortName { get; set; }
+        public String Password { get; set; }
     }
 }

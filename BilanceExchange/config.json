@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "BilanceExchangeDB": "Server=localhost;Database=BilanceExchange;Uid=admin;Pwd=admin;"
+    "BilanceExchangeDB": "Server=localhost:3306;Database=bilanceexchange;Uid=admin;Pwd=admin;"
   }
 }

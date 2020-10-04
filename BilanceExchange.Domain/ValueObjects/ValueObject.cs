@@ -8,7 +8,7 @@ namespace Bilance_Exchange.Domain.ValueObjects
     {
         public override bool Equals(object obj)
         {
-            var valueObject = obj as T;
+            var valueObject = obj as TEntity;
 
             if (ReferenceEquals(valueObject, null))
                 return false;
@@ -16,7 +16,7 @@ namespace Bilance_Exchange.Domain.ValueObjects
             if (GetType() != obj.GetType())
                 return false;
 
-            return EqualsCore(valueObject);
+            return Equals(obj);
         }
     }
 }

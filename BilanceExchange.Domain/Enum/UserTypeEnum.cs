@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Bilance_Exchange.Domain.Enum
 {
-    enum UserTypeEnum
+    public enum UserTypeEnum
     {
         admin = 1,
         investor = 2,
