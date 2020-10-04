@@ -7,11 +7,19 @@ using System.Text;
 
 namespace Bilance_Exchange.Repository.Config
 {
-    class CurrencyConfiguration : IEntityTypeConfiguration<User>
+    class CurrencyConfiguration : IEntityTypeConfiguration<Currency>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<Currency> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(c => c.Id);
+
+            builder.Property(c => c.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            builder.Property(c => c.ShortName)
+                .IsRequired()
+                .HasMaxLength(5);
         }
     }
 }

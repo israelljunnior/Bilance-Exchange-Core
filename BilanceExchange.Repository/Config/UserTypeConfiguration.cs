@@ -11,7 +11,10 @@ namespace Bilance_Exchange.Repository.Config
     {
         public void Configure(EntityTypeBuilder<UserType> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(ut => ut.Id);
+
+            builder.Property(ut => ut.type)
+                .IsRequired();
         }
     }
 }

@@ -11,7 +11,27 @@ namespace Bilance_Exchange.Repository.Config
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(u => u.Id);
+            
+            builder.Property(u => u.Email)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            builder.Property(u => u.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            builder.Property(u => u.Password)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            builder
+               .HasOne(u => u.UserType);
+
+            builder
+               .HasOne(u => u.Wallet)
+                .WithOne(w => w.User)
+                .HasForeignKey<Wallet>(w => w.UserId);
         }
     }
 }

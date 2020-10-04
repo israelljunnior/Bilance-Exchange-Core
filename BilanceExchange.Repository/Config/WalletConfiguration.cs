@@ -11,7 +11,16 @@ namespace Bilance_Exchange.Repository.Config
     {
         public void Configure(EntityTypeBuilder<Wallet> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(w => w.Id);
+
+            builder.Property(w => w.TotalBalance)
+                .HasColumnType("decimal(19,4)")
+                .IsRequired();
+
+            builder
+                .HasMany(w => w.Balances)
+                .WithOne(b => b.Wallet)
+                .IsRequired();
         }
     }
 }
