@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bilance_Exchange.Repository.Migrations
 {
-    public partial class FirstVersion : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,8 +14,7 @@ namespace Bilance_Exchange.Repository.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 255, nullable: false),
-                    ShortName = table.Column<string>(maxLength: 5, nullable: false),
-                    Password = table.Column<string>(nullable: true)
+                    ShortName = table.Column<string>(maxLength: 5, nullable: false)
                 },
                 constraints: table =>
                 {

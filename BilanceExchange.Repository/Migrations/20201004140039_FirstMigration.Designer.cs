@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bilance_Exchange.Repository.Migrations
 {
     [DbContext(typeof(BilanceExchangeContext))]
-    [Migration("20201004020254_FirstVersion")]
-    partial class FirstVersion
+    [Migration("20201004140039_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,9 +58,6 @@ namespace Bilance_Exchange.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
                         .HasMaxLength(255);
-
-                    b.Property<string>("Password")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("ShortName")
                         .IsRequired()

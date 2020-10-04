@@ -22,6 +22,12 @@ namespace BilanceExchange.Repository.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(BilanceExchangeContext).Assembly);
+
+            /*modelBuilder.Entity<Currency>().HasData(
+                new Currency() { Id = 1, Name = "Bitcoin" },
+                new Currency() { }
+                );*/
+
             base.OnModelCreating(modelBuilder);
         }
     }
