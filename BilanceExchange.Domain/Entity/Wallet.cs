@@ -7,7 +7,6 @@ namespace Bilance_Exchange.Domain.Entity
 {
     public class Wallet : Entity
     {
-        public int Id { get; set; }
         public double TotalBalance { get; set; }
         public virtual ICollection<CoinBalance> Balances { get; set; }
         public int UserId { get; set; }

@@ -8,7 +8,6 @@ namespace Bilance_Exchange.Domain.Entity
 {
     public class User : Entity
     {
-        public int Id { get; set; }
         public String Name { get; set; }
         public String Email { get; set; }
         public String Password { get; set; }

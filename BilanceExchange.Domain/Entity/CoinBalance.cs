@@ -6,7 +6,6 @@ namespace Bilance_Exchange.Domain.Entity
 {
     public class CoinBalance : Entity
     {
-        public int Id { get; set; }
         public int CurrencyId { get; set; }
         public virtual Currency Currency { get; set; }
         public double Balance { get; set; }
