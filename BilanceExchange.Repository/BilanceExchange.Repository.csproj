@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <Compile Remove="Migrations\20201004142954_maxSupplyOnCurrencies.cs" />
+    <Compile Remove="Migrations\20201004142954_maxSupplyOnCurrencies.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositories\" />
   </ItemGroup>
 

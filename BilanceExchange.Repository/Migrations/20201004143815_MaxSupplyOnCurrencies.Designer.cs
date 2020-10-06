@@ -3,14 +3,16 @@ using System;
 using BilanceExchange.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bilance_Exchange.Repository.Migrations
 {
     [DbContext(typeof(BilanceExchangeContext))]
-    partial class BilanceExchangeContextModelSnapshot : ModelSnapshot
+    [Migration("20201004143815_MaxSupplyOnCurrencies")]
+    partial class MaxSupplyOnCurrencies
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,21 +71,6 @@ namespace Bilance_Exchange.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Currencies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 2,
-                            MaxSupply = 21000000.0,
-                            Name = "Bitcoin",
-                            ShortName = "BTC"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Dollar",
-                            ShortName = "USDR"
-                        });
                 });
 
             modelBuilder.Entity("Bilance_Exchange.Domain.Entity.User", b =>

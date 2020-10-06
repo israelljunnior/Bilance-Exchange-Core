@@ -20,6 +20,9 @@ namespace Bilance_Exchange.Repository.Config
             builder.Property(c => c.ShortName)
                 .IsRequired()
                 .HasMaxLength(5);
+
+            builder.Property(c => c.MaxSupply)
+                .IsRequired(false);
         }
     }
 }

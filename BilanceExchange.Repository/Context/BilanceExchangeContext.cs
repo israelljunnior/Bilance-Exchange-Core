@@ -3,6 +3,7 @@ using Bilance_Exchange.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BilanceExchange.Repository.Context
@@ -23,10 +24,11 @@ namespace BilanceExchange.Repository.Context
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(BilanceExchangeContext).Assembly);
 
-            /*modelBuilder.Entity<Currency>().HasData(
-                new Currency() { Id = 1, Name = "Bitcoin" },
-                new Currency() { }
-                );*/
+            modelBuilder.Entity<Currency>().HasData(new Currency[] {
+                new Currency() { Id = 2, Name = "Bitcoin", ShortName = "BTC", MaxSupply = 21000000 },
+                new Currency() { Id = 3, Name = "Dollar", ShortName = "USDR", MaxSupply = null}
+            }
+            );
 
             base.OnModelCreating(modelBuilder);
         }

@@ -3,14 +3,16 @@ using System;
 using BilanceExchange.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bilance_Exchange.Repository.Migrations
 {
     [DbContext(typeof(BilanceExchangeContext))]
-    partial class BilanceExchangeContextModelSnapshot : ModelSnapshot
+    [Migration("20201004151238_SeedCurrenciesTable")]
+    partial class SeedCurrenciesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
