@@ -14,6 +14,11 @@ using Microsoft.Extensions.Logging;
 
 using BilanceExchange.Repository.Context;
 using Microsoft.EntityFrameworkCore;
+using Bilance_Exchange.Domain.Interfaces;
+using Bilance_Exchange.Repository.Repositories;
+using Bilance_Exchange.Domain.Validators;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Http;
 
 namespace BilanceExchange
 {
@@ -35,6 +40,15 @@ namespace BilanceExchange
             var connectionString = Configuration.GetConnectionString("BilanceExchangeDB");
             services.AddDbContext<BilanceExchangeContext>(option => option.UseLazyLoadingProxies().UseMySql(connectionString,
                                                         m => m.MigrationsAssembly("BilanceExchange.Repository")));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(ValidateModelAttribute));
+            })
+            .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
