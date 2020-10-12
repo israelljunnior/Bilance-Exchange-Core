@@ -7,7 +7,7 @@ namespace Bilance_Exchange.Domain.Interfaces.Service
 {
     public interface IUserService : IBaseService<User>
     {
-        
-
+        string HashPassword(String password);
+        bool VerifyPassword(String password, byte[] hash);
     }
 }

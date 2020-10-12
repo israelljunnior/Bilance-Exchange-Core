@@ -6,9 +6,11 @@ namespace Bilance_Exchange.Domain.Interfaces
 {
     public interface IBaseRepository<TEntity> : IDisposable where TEntity : class
     {
-        void Save(TEntity entity);
-        TEntity findByID(int id);
-        IEnumerable<TEntity> findAll();
-        void remove(int id);
+        void Add(TEntity obj);
+        TEntity GetById(int id);
+        IEnumerable<TEntity> GetAll();
+        void Update(TEntity obj);
+        void Remove(TEntity obj);
+        void Dispose();
     }
 }
