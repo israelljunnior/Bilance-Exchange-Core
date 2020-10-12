@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bilance_Exchange.Domain.Entity;
 using Bilance_Exchange.Domain.Interfaces;
+using Bilance_Exchange.Domain.Interfaces.Service;
 using Bilance_Exchange.Domain.Validators;
 using Bilance_Exchange.Repository.Repositories;
 using FluentValidation;
@@ -17,11 +18,11 @@ namespace Bilance_Exchange.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {   
-        private readonly IUserRepository UserRepository;
+        private readonly IUserService _userService;
         private readonly IHttpContextAccessor _httpContextAccesso;
-        public UserController(IUserRepository UserRepository, IHttpContextAccessor http)
+        public UserController(IUserService UserService, IHttpContextAccessor http)
         {
-            this.UserRepository = UserRepository;
+            this._userService = UserService;
             _httpContextAccesso = http;
         }
 
@@ -29,8 +30,10 @@ namespace Bilance_Exchange.Controllers
         public IActionResult Save([FromBody] User User) {
             var validator = new UserValidator();
             var results = validator.Validate(User);
-            if (!results.IsValid) {
-                this.UserRepository.Save(User);
+            if (results.IsValid) {
+                var EncryptedPassword = this._userService.HashPassword(User.Password);
+                User.Password = EncryptedPassword;
+                this._userService.Add(User);
                 return Ok(User);
             }
             return BadRequest(results.Errors);
