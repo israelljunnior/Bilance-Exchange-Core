@@ -14,7 +14,7 @@ namespace Bilance_Exchange.Domain.Services
         }
         public void Add(TEntity obj)
         {
-            throw new NotImplementedException();
+            _repository.Add(obj);
         }
 
         public void Dispose()
