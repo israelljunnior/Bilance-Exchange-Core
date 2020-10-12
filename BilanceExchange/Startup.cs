@@ -19,6 +19,9 @@ using Bilance_Exchange.Repository.Repositories;
 using Bilance_Exchange.Domain.Validators;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Http;
+using Bilance_Exchange.Domain.Services;
+using Bilance_Exchange.Domain.Interfaces.Service;
+using Bilance_Exchange.Domain.Services.Security;
 
 namespace BilanceExchange
 {
@@ -41,6 +44,7 @@ namespace BilanceExchange
             services.AddDbContext<BilanceExchangeContext>(option => option.UseLazyLoadingProxies().UseMySql(connectionString,
                                                         m => m.MigrationsAssembly("BilanceExchange.Repository")));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddMvc(options =>
