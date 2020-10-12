@@ -19,25 +19,25 @@ namespace Bilance_Exchange.Repository.Repositories
             this.BilanceExchangeContext = BilanceExchangeContext;
         }
 
-        public void Save(TEntity entity)
+        public void Add(TEntity entity)
         {
             this.BilanceExchangeContext.Set<TEntity>().Add(entity);
             this.BilanceExchangeContext.SaveChanges();
         }
 
-        public IEnumerable<TEntity> findAll()
+        public IEnumerable<TEntity> GetAll()
         {
             return this.BilanceExchangeContext.Set<TEntity>().ToList();
         }
 
-        public TEntity findByID(int id)
+        public TEntity GetById(int id)
         {
             return this.BilanceExchangeContext.Set<TEntity>().Find(id);
         }
 
-        public void remove(int id)
+        public void Remove(TEntity obj)
         {
-            TEntity entity = this.BilanceExchangeContext.Set<TEntity>().Find(id);
+            TEntity entity = this.BilanceExchangeContext.Set<TEntity>().Find(obj);
             this.BilanceExchangeContext.Set<TEntity>().Remove(entity);
             this.BilanceExchangeContext.SaveChanges();
         }
@@ -69,6 +69,11 @@ namespace Bilance_Exchange.Repository.Repositories
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
+        }
+
+        public void Update(TEntity obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }
